@@ -4,6 +4,6 @@ def fib(m):
     else:
         return fib(m-1) + fib(m-2)
 
-print(fib(5))
+print(fib(8))
 
 # Not so efficient code using recursion
