@@ -11,5 +11,3 @@ def fibdp(m,d):
 d = {0:1,1:1}
 
 print(fibdp(9,d))
-
-
