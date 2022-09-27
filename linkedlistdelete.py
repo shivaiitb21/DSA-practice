@@ -16,6 +16,7 @@ class Node:
 class LinkedList():
     def __init__(self):
         self.head = None
+
     def insertHead(self, newNode):
         tempNode = self.head
         self.head = newNode
@@ -63,6 +64,14 @@ class LinkedList():
                     break
                 lastNode = lastNode.next
             lastNode.next = newNode
+
+    def deleteEnd(self):
+        lastNode = self.head
+        while lastNode.next is not None:
+            previousNode = lastNode
+            lastNode = lastNode.next
+        previousNode.next = None
+
 
     def printList(self):
         currentNode = self.head
