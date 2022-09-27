@@ -22,6 +22,8 @@ class LinkedList():
         self.head = newNode
         self.head.next = tempNode
 
+        del tempNode
+
 
     def insertEnd(self, newNode):
         #head => John, next of john points to None
