@@ -25,7 +25,21 @@ class LinkedList():
         del tempNode
 
 
+    def listLength(self):
+        currentNode = self.head
+        length = 0
+
+        while currentNode is not None:
+            length += 1
+            currentNode = currentNode.next
+        return length
+
     def insertAt(self, newNode, position):
+        
+        if position<0 or position>self.listLength():
+            print("Invalid Position")
+            return 
+
         if position == 0:
             self.insertHead(newNode)
             return
@@ -76,10 +90,10 @@ linkedList = LinkedList()
 linkedList.insertEnd(firstNode)
 
 secondNode = Node(20)
-linkedList.insertEnd(secondNode)
+linkedList.insertEnd(secondNode)    
 
 thirdNode = Node(15)
-linkedList.insertAt(thirdNode, 0)
+linkedList.insertAt(thirdNode, 25)
 
 
 linkedList.printList() 
