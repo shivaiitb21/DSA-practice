@@ -15,9 +15,15 @@ class Node:
 
 class LinkedList():
     def __init__(self):
-        self.head = None\
-    
-    def insert(self, newNode):
+        self.head = None
+
+    def insertHead(self, newNode):
+        tempNode = self.head
+        self.head = newNode
+        self.head.next = tempNode
+
+
+    def insertEnd(self, newNode):
         #head => John, next of john points to None
         if self.head is None:
             self.head = newNode
@@ -48,13 +54,13 @@ firstNode = Node("John")
 linkedList = LinkedList()
 #Linked list is intially empty >> head of linked list is none
 #insert method in linked list to insert node into linked list
-linkedList.insert(firstNode)
+linkedList.insertEnd(firstNode)
 
 secondNode = Node("Ben")
-linkedList.insert(secondNode)
+linkedList.insertEnd(secondNode)
 
 thirdNode = Node("Mac")
-linkedList.insert(thirdNode)
+linkedList.insertHead(thirdNode)
 
 
 linkedList.printList() 
