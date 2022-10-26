@@ -2,7 +2,6 @@ import sys
 
 sys.setrecursionlimit(1500000)
 
-
 def merge_sort(a):
     la = a[:len(a)//2]
     ra = a[len(a)//2:]
